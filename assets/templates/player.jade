@@ -1,0 +1,13 @@
+include ./playbutton
+
+mixin player
+  #main_container
+    video(id="video-player")
+
+  #main_panel
+    +playbutton
+    #time  
+
+  #main_subs
+    p#top_subs
+    p#bottom_subs

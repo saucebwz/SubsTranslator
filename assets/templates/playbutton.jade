@@ -1,0 +1,30 @@
+//	from="M0,0 L0,20 L18,10"
+//	to="M0,0 v20 h6 v-20 z M10,0 v20 h6 v-20 z"
+
+mixin playbutton
+	svg.playButton(width="20" height="20" style="display: inline-block")
+		path(id="play" d="M1,0 v20 l9,-5 v-11 z M10,4 v11 l9,-6 z" fill="white" opacity="0.5")
+			animate(
+				attributeName="opacity"
+				from="0.5"
+				to="1"
+				begin="mouseover"
+				dur="0.4s"
+				fill="freeze"
+			)
+			animate(
+				attributeName="opacity"
+				from="1"
+				to="0.5"
+				begin="mouseout"
+				dur="0.4s"
+				fill="freeze"
+			)
+			animate(
+				attributeName="d"
+				attributeType="XML"
+				values="M1,0 v20 l9,-5 v-11 z M10,4 v11 l9,-6 z; M1,0 v20 l8,-1 v-18 z M10,2 v16 l8,-2 v-12 z; M1,0 v20 l9,-4 v-12 z M10,2 v16 l8,-2 v-12 z"
+				begin="click"
+				dur="0.5s"
+				fill="freeze"
+			)

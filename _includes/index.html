@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subs</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!--	from="M0,0 L0,20 L18,10"-->
+    <!--	to="M0,0 v20 h6 v-20 z M10,0 v20 h6 v-20 z"-->
+    <header>
+      <p class="logo">ESubs</p>
+    </header>
+    <div class="content-wrapper">
+      <div class="input-wrapper">
+        <input type="file" id="video-input" class="upload-video"><a href="" onclick="document.getElementById('video-input').click();return false;" class="button button-yellow">Upload</a>
+      </div>
+      <div class="video-wrapper">
+            <div id="main_container">
+              <video id="video-player"></video>
+            </div>
+            <div id="main_panel">
+                  <svg width="20" height="20" style="display: inline-block" class="playButton">
+                    <path id="play" d="M1,0 v20 l9,-5 v-11 z M10,4 v11 l9,-6 z" fill="white" opacity="0.5">
+                      <animate attributeName="opacity" from="0.5" to="1" begin="mouseover" dur="0.4s" fill="freeze"></animate>
+                      <animate attributeName="opacity" from="1" to="0.5" begin="mouseout" dur="0.4s" fill="freeze"></animate>
+                      <animate attributeName="d" attributeType="XML" values="M1,0 v20 l9,-5 v-11 z M10,4 v11 l9,-6 z; M1,0 v20 l8,-1 v-18 z M10,2 v16 l8,-2 v-12 z; M1,0 v20 l9,-4 v-12 z M10,2 v16 l8,-2 v-12 z" begin="click" dur="0.5s" fill="freeze"></animate>
+                    </path>
+                  </svg>
+              <div id="time"> </div>
+            </div>
+            <div id="main_subs">
+              <p id="top_subs"></p>
+              <p id="bottom_subs"></p>
+            </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../static/js/Translator.js">   </script>
+    <script type="text/javascript" src="../static/js/Timeline.js"></script>
+    <script type="text/javascript" src="../static/js/subread.js"></script>
+    <script type="text/javascript" src="../static/js/balalaika.js"></script>
+    <script type="text/javascript" src="../static/js/Player.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+  </body>
+</html>
