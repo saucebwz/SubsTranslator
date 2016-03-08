@@ -1,2 +1,2 @@
 # SubsTranslator
-NW.js application translating videos' subtitles by click.
+NW.js application, translating videos' subtitles by click.
